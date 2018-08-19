@@ -6,11 +6,12 @@ var plumber = require("gulp-plumber");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var svgstore = require("gulp-svgstore");
+var posthtml = require("gulp-posthtml");
 var rename = require("gulp-rename");
 var svgmin = require("gulp-svgmin");
 var server = require("browser-sync").create();
-var run = require("run-sequence");
 
+// Препроцессор, автопрефиксер, минификация CSS
 gulp.task("style", function() {
   gulp.src("source/less/style.less")
     .pipe(plumber())
@@ -22,20 +23,16 @@ gulp.task("style", function() {
     .pipe(server.stream());
 });
 
-gulp.task("sprite", function () {
-  return gulp.src("source/img/svg/*.svg")
-    .pipe(svgmin({
-      js2svg: {
-        pretty: true
-      }
-    }))
-    .pipe(svgstore({
-      inlineSvg: true
-    }))
-    .pipe(rename("sprite.svg"))
-    .pipe(gulp.dest("source/img"));
+// posthtml для вставки спрайта в разметку html-страниц, а также минификация кода html-страницы
+gulp.task("html", function() {
+  return gulp.src("source/*.html")
+    .pipe(posthtml([
+      include()
+    ]))
+    .pipe(gulp.dest("source"));
 });
 
+// Сервер Browser Sync
 gulp.task("serve", ["style"], function() {
   server.init({
     server: "source/",
@@ -45,10 +42,12 @@ gulp.task("serve", ["style"], function() {
     ui: false
   });
 
-  gulp.watch("source/less/**/*.{less}", ["style"]);
+  /**************************/
+  /* СЛЕДИМ ЗА ИЗМЕНЕНИЯМИ  */
+  /**************************/
+  // Следим за изменениями less-файлов
+  gulp.watch("source/less/**/*.less", ["style"]);
+    // Следим за изменениями html-страничек
   gulp.watch("source/*.html").on("change", server.reload);
-});
-
-gulp.task("build", function () {
-  run("sprite");
+  
 });

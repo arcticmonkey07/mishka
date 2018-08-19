@@ -11,15 +11,53 @@
   </head>
   <body>
     <header class="page-header">
-      <a class="page-header__logo" href="">
-        
-      </a>
+      <nav class="page-header__container main-nav main-nav--closed">
+        <div class="page-header__logo-wrapper">
+          <a class="page-header__logo">
+            <svg class="page-header__logo-svg" width="86" height="35">
+              <use xlink:href="img/sprite.svg#logo-mobile"></use>
+            </svg>
+          </a>
+        </div>
+        <button class="main-nav__toggle" type="button" aria-label="Кнопка открытия/закрытия выпадающего меню">
+          <span class="visually-hidden">Открыть меню</span>
+          <svg class="main-nav__toggle-svg--open" width="19.958px" height="14px">
+            <use xlink:href="img/sprite.svg#icon-menu-open"></use>
+          </svg>
+          <svg class="main-nav__toggle-svg--close" width="20.514px" height="20.512px">
+            <use xlink:href="img/sprite.svg#icon-menu-close"></use>
+          </svg>
+        </button>
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item">
+            <a class="site-list__link" href="">Каталог товаров</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="">Вязание на заказ</a>
+          </li>
+        </ul>
+        <form class="main-nav__form" action="https://echo.htmlacademy.ru" method="get">
+          <input class="main-nav__search" type="text" name="search-field" placeholder="Поиск по сайту">
+          <svg class="main-nav__search-svg" width="17.6px" height="17.6px">
+            <use xlink:href="img/sprite.svg#grey-icon-search"></use>
+          </svg>
+        </form>
+        <ul class="main-nav__list user-list">
+          <li class="user-list__item">
+            <a class="user-list__cart" href="">Корзина: пока пуста
+              <svg class="user-list__cart-svg" width="20.294px" height="18.849px">
+                <use xlink:href="img/sprite.svg#icon-cart"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
     </header>
 
-    <main>
-      
+    <main class="page-main">
+
     </main>
 
-  <script src="js/sctipt.js"></script>
+  <script src="js/script.js"></script>
   </body>
 </html>
