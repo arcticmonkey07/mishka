@@ -529,6 +529,10 @@ template {
   fill: #63d1bb;
   opacity: 0.3;
 }
+.popular-items {
+  padding-bottom: 51px;
+  margin-bottom: 20px;
+}
 .popular-items__top-wrapper {
   margin-bottom: 19px;
 }
@@ -587,7 +591,7 @@ template {
 .button {
   min-width: 259px;
   padding: 14px 15px;
-  font-size: 17px;
+  font-size: 18px;
   line-height: 20px;
   font-weight: 700;
   color: #444444;
@@ -609,6 +613,221 @@ template {
   padding-left: 30px;
   padding-right: 30px;
   width: 260px;
+}
+.about-us {
+  position: relative;
+  margin-bottom: 36px;
+}
+.about-us::before {
+  content: "";
+  position: absolute;
+  top: -41px;
+  left: 0;
+  width: 320px;
+  height: 23px;
+  background-image: url("../img/svg/bg-zigzag-line.svg");
+  background-size: 320px 23px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.about-us__wrapper {
+  margin-bottom: 54px;
+}
+.about-us__title {
+  margin: 0;
+  margin-bottom: 4px;
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: 700;
+}
+.about-us__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.about-us__item {
+  padding-top: 83px;
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: 700;
+}
+.about-us__svg {
+  margin-left: 7px;
+  margin-bottom: 8px;
+  fill: #63d1bb;
+}
+.about-us__item--flower {
+  background-image: url("../img/svg/green-icon-feature-flower.svg");
+  background-position: 7px 26px;
+  background-repeat: no-repeat;
+  fill: #63d1bb;
+}
+.about-us__item--money {
+  background-image: url("../img/svg/green-icon-feature-money.svg");
+  background-position: 0 28px;
+  background-repeat: no-repeat;
+}
+.about-us__item--heart {
+  background-image: url("../img/svg/green-icon-feature-heart.svg");
+  background-position: 7px 33px;
+  background-repeat: no-repeat;
+}
+.about-us__item--ball {
+  background-image: url("../img/svg/green-icon-feature-ball.svg");
+  background-position: 2px 31px;
+  background-repeat: no-repeat;
+}
+.about-us__item--rocket {
+  background-image: url("../img/svg/green-icon-feature-rocket.svg");
+  background-position: 0 31px;
+  background-repeat: no-repeat;
+}
+.about-us__item--gift {
+  background-image: url("../img/svg/green-icon-feature-gift.svg");
+  background-position: 2px 29px;
+  background-repeat: no-repeat;
+}
+.reviews__title {
+  margin: 0;
+  margin-bottom: 25px;
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: 700;
+}
+.reviews__descr {
+  margin: 0;
+  margin-bottom: 27px;
+  letter-spacing: 0.4px;
+}
+.reviews__name {
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: 700;
+}
+.reviews__instagram {
+  font-size: 17px;
+  line-height: 30px;
+  color: #444444;
+}
+.reviews__arrows {
+  display: flex;
+  margin-top: 28px;
+  margin-bottom: 39px;
+}
+.reviews__arrows-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 130px;
+  height: 51px;
+  border: 1px solid #ececec;
+  background-color: transparent;
+  cursor: pointer;
+}
+.reviews__arrows-svg:hover {
+  opacity: 0.6;
+}
+.reviews__arrows-svg:active {
+  opacity: 0.3;
+}
+.contacts {
+  margin-bottom: 39px;
+  padding-top: 50px;
+}
+.contacts__wrapper {
+  position: relative;
+  margin-bottom: 39px;
+}
+.contacts__wrapper::before {
+  content: "";
+  position: absolute;
+  top: -41px;
+  left: 0;
+  width: 320px;
+  height: 23px;
+  background-image: url("../img/svg/bg-zigzag-line.svg");
+  background-size: 320px 23px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.contacts__title {
+  margin: 0;
+  margin-bottom: 27px;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+}
+.contacts__part {
+  display: flex;
+  margin-bottom: 30px;
+}
+.contacts__label {
+  margin: 0;
+  margin-right: 33px;
+}
+.contacts__email {
+  display: block;
+  line-height: 29px;
+  color: #444444;
+  border-bottom: 1px solid #63d1bb;
+}
+.contacts__adress {
+  margin: 0;
+  width: 140px;
+}
+.map {
+  margin-bottom: 42px;
+}
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 260px;
+  margin: auto;
+  padding-bottom: 19px;
+  border-bottom: 1px solid #e5e5e5;
+}
+.social__list {
+  display: flex;
+  justify-content: space-between;
+  width: 141px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.social__instagram {
+  position: relative;
+  top: 5px;
+  left: -3px;
+}
+.social__twitter {
+  position: relative;
+  top: 5px;
+  left: -3px;
+}
+.main-footer {
+  padding-top: 24px;
+  background-color: #f1f1f1;
+}
+.copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 16px;
+  margin-bottom: 20px;
+}
+.copyright__title {
+  margin-right: 17px;
+  font-size: 19px;
+  line-height: 18px;
+  font-weight: 700;
+}
+.copyright__svg {
+  position: relative;
+  top: 2px;
+  left: 5px;
+  width: 41px;
+  height: 41px;
 }
 body {
   font-size: 15px;
